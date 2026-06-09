@@ -8,7 +8,6 @@
 <meta name="description" content="靈元院建院奠基護法法會｜建寺之功德無量。奉無極瑤池金母之旨，靈元院正尋覓下一處靈修道場新址，號召龍鳳兒隨喜護持。">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;700&family=Noto+Sans+TC:wght@300;400;500&family=Cormorant+Garamond:wght@300;400;500&display=swap">
 <style>
-/* 完整正確的 CSS（包含 support-grid 垂直排列 + hover 放大） */
 :root {
   --lyy-dark: #0f1a14;
   --lyy-gold: #C5A26F;
@@ -31,11 +30,19 @@ body {
   min-height: 100vh;
 }
 
-h1, h2, h3 { font-family: var(--font-serif); font-weight: 500; letter-spacing: 0.08em; }
+h1, h2, h3 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
 
-.container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
 
-/* Navigation（已改為內部連結） */
+/* Navigation */
 nav {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -44,8 +51,17 @@ nav {
   border-bottom: 1px solid rgba(197, 162, 111, 0.15);
   z-index: 100;
 }
-.nav-content { display: flex; justify-content: center; padding: 18px 0; }
-.nav-links { display: flex; gap: 36px; list-style: none; align-items: center; }
+.nav-content {
+  display: flex;
+  justify-content: center;
+  padding: 18px 0;
+}
+.nav-links {
+  display: flex;
+  gap: 36px;
+  list-style: none;
+  align-items: center;
+}
 .nav-links > li { position: relative; }
 .nav-links > li > a,
 .nav-links > li > span {
@@ -62,7 +78,11 @@ nav {
 .nav-links > li > a:hover,
 .nav-links > li > span:hover { color: var(--lyy-gold); }
 .nav-links > li > a.active { color: var(--lyy-gold); }
-.nav-links > li > span.has-dropdown::after { content: '▾'; font-size: 10px; opacity: 0.6; }
+.nav-links > li > span.has-dropdown::after {
+  content: '▾';
+  font-size: 10px;
+  opacity: 0.6;
+}
 .dropdown {
   display: none;
   position: absolute;
@@ -86,10 +106,65 @@ nav {
   font-size: 13.5px;
   transition: all 0.2s;
 }
-.dropdown li a:hover { background: rgba(197, 162, 111, 0.1); color: var(--lyy-gold); }
+.dropdown li a:hover {
+  background: rgba(197, 162, 111, 0.1);
+  color: var(--lyy-gold);
+}
 .nav-links > li:hover .dropdown { display: block; }
 
-/* 其他完整 CSS（hero, section, support-grid 垂直 + hover 放大 等）已包含 */
+/* Support Grid - 上下排 + hover 放大 */
+.support-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  margin: 40px 0;
+}
+.support-grid a {
+  display: block;
+}
+.support-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+  cursor: zoom-in;
+}
+.support-grid img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+}
+
+.page-content {
+  padding-top: 120px;
+  padding-bottom: 80px;
+}
+
+.hero {
+  text-align: center;
+  padding: 140px 24px 80px;
+  color: var(--lyy-cream);
+}
+.hero h1 {
+  font-size: clamp(32px, 6vw, 52px);
+  margin-bottom: 16px;
+}
+
+.section {
+  max-width: 900px;
+  margin: 0 auto 80px;
+  padding: 0 24px;
+}
+
+footer {
+  background: rgba(8, 14, 10, 0.85);
+  padding: 40px 0 32px;
+  font-size: 13px;
+  color: rgba(245, 241, 233, 0.5);
+  text-align: center;
+  letter-spacing: 0.06em;
+  border-top: 1px solid rgba(197, 162, 111, 0.1);
+}
 </style>
 </head>
 <body>
@@ -105,19 +180,39 @@ nav {
           <ul class="dropdown">
             <li><a href="niandian.html">年度點燈</a></li>
             <li><a href="dizhi.html" class="active">奠基法會</a></li>
-            <li><a href="https://kinkiosel.pixnet.net/blog/post/33478333" target="_blank">線上課程</a></li>
-            <li><a href="https://kinkiosel.pixnet.net/blog/post/33528826" target="_blank">例行法儀</a></li>
+            <li><a href="https://kinkiosel.pixnet.net/blog/post/33478333" target="_blank" rel="noopener noreferrer">線上課程</a></li>
+            <li><a href="https://kinkiosel.pixnet.net/blog/post/33528826" target="_blank" rel="noopener noreferrer">例行法儀</a></li>
           </ul>
         </li>
-        <!-- 其他下拉選單保持原本 -->
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- 完整頁面內容已恢復（hero, video, 所有 section, support-grid 垂直排列 + hover 放大, footer 等） -->
 <div class="page-content">
-  <!-- 原本所有內容已恢復為正常狀態 -->
+  <div class="hero">
+    <h1>建院奠基護法法會</h1>
+    <p style="font-size:18px; opacity:0.85; margin-top:20px;">功德無量  護持建寺</p>
+  </div>
+
+  <div class="section">
+    <p>奉無極瑤池金母慈示，靈元院正積極尋覓下一處靈修道場新址。為使建院之路順遂，同時也號召靈修龍鳳兒隨喜捐獻，支持建寺，讓未來的新道場得以順利成就。</p>
+  </div>
+
+  <div class="section">
+    <div class="support-grid">
+      <a href="https://lyyuan.tw/images/dizhi-gongde.jpg" target="_blank" rel="noopener noreferrer">
+        <img src="https://lyyuan.tw/images/dizhi-gongde.jpg" alt="奠基功德主">
+      </a>
+      <a href="https://lyyuan.tw/images/dizhi-items.jpg" target="_blank" rel="noopener noreferrer">
+        <img src="https://lyyuan.tw/images/dizhi-items.jpg" alt="護持項目">
+      </a>
+    </div>
+  </div>
+
+  <div class="section">
+    <p style="text-align:center; font-size:15px; opacity:0.8;">目前閉院期間，暫不對外開放參訪。如有事務或修行相關諮詢，敬請透過 Telegram 聯繫。</p>
+  </div>
 </div>
 
 <footer>
