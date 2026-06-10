@@ -5,23 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>靈元院 | Ling Yuan Yuan</title>
 <meta name="theme-color" content="#0f1a14">
-<meta name="description" content="靈元院——奉靈山派創始神無極瑤池金母慈示，於台中設立靈修道院，以喚醒元神靈性為根本。">
+<meta name="description" content="靈元院——奉靈山派創始神無極瑤池金母慈示，於台中設立專屬靈修之會靈聖地，以喚醒元神靈性為根本。">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;700&family=Noto+Sans+TC:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap">
 <style>
 :root {
   --lyy-dark: #0f1a14;
-  --lyy-dark-warm: #1a1710;
   --lyy-gold: #C5A26F;
-  --lyy-gold-dim: rgba(197,162,111,0.45);
   --lyy-cream: #F5F1E9;
-  --lyy-ink: rgba(245,241,233,0.82);
   --font-serif: 'Noto Serif TC', 'Georgia', serif;
   --font-sans: 'Noto Sans TC', 'Arial', sans-serif;
   --font-en: 'Cormorant Garamond', serif;
 }
-
 * { box-sizing: border-box; margin: 0; padding: 0; }
-
 body {
   font-family: var(--font-sans);
   color: var(--lyy-cream);
@@ -30,13 +25,7 @@ body {
   letter-spacing: 0.04em;
   overflow-x: hidden;
 }
-
-h1, h2, h3 {
-  font-family: var(--font-serif);
-  font-weight: 400;
-  letter-spacing: 0.18em;
-}
-
+h1, h2, h3 { font-family: var(--font-serif); font-weight: 400; letter-spacing: 0.18em; }
 .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
 
 /* ── Navigation ── */
@@ -63,12 +52,7 @@ nav {
   text-decoration: none;
   opacity: 0.9;
 }
-.nav-links {
-  display: flex;
-  gap: 32px;
-  list-style: none;
-  align-items: center;
-}
+.nav-links { display: flex; gap: 32px; list-style: none; align-items: center; }
 .nav-links > li { position: relative; }
 .nav-links > li > a,
 .nav-links > li > span {
@@ -78,44 +62,33 @@ nav {
   letter-spacing: 0.14em;
   transition: color 0.3s ease;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 4px;
+  display: flex; align-items: center; gap: 4px;
 }
 .nav-links > li > a:hover,
 .nav-links > li > span:hover { color: var(--lyy-gold); }
 .nav-links > li > a.active { color: var(--lyy-gold); }
-.nav-links > li > span.has-dropdown::after {
-  content: '▾'; font-size: 9px; opacity: 0.5;
-}
+.nav-links > li > span.has-dropdown::after { content: '▾'; font-size: 9px; opacity: 0.5; }
 .dropdown {
   display: none;
   position: absolute;
-  top: calc(100% + 16px);
-  left: 50%;
+  top: calc(100% + 16px); left: 50%;
   transform: translateX(-50%);
   background: rgba(20, 28, 22, 0.97);
   border: 1px solid rgba(197, 162, 111, 0.15);
   border-radius: 2px;
   box-shadow: 0 12px 40px rgba(0,0,0,0.5);
-  min-width: 160px;
-  padding: 6px 0;
-  z-index: 200;
-  list-style: none;
+  min-width: 160px; padding: 6px 0;
+  z-index: 200; list-style: none;
 }
 .dropdown li a {
-  display: block;
-  padding: 10px 20px;
+  display: block; padding: 10px 20px;
   color: rgba(245,241,233,0.7);
-  text-decoration: none;
-  font-size: 13px;
-  letter-spacing: 0.1em;
-  transition: all 0.2s;
+  text-decoration: none; font-size: 13px;
+  letter-spacing: 0.1em; transition: all 0.2s;
 }
 .dropdown li a:hover {
   background: rgba(197, 162, 111, 0.08);
-  color: var(--lyy-gold);
-  padding-left: 24px;
+  color: var(--lyy-gold); padding-left: 24px;
 }
 .nav-links > li:hover .dropdown { display: block; }
 .nav-links > li > span.has-dropdown::before {
@@ -134,301 +107,279 @@ nav {
   justify-content: center;
   overflow: hidden;
 }
-
-/* 背景：大樹＋暖墨色遮罩 */
 .hero-bg {
-  position: absolute;
-  inset: 0;
+  position: absolute; inset: 0;
   background: url('forest-path.jpg') center/cover no-repeat;
   filter: saturate(0.55) brightness(0.72);
   z-index: 0;
 }
 .hero-overlay {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(180deg,
-      rgba(26,23,16,0.38) 0%,
-      rgba(15,20,14,0.52) 60%,
-      rgba(10,15,10,0.72) 100%);
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg,
+    rgba(26,23,16,0.38) 0%,
+    rgba(15,20,14,0.52) 60%,
+    rgba(10,15,10,0.72) 100%);
   z-index: 1;
 }
-
-/* 印章裝飾（SVG 內嵌） */
 .seal-decor {
-  position: absolute;
-  opacity: 0.07;
-  z-index: 2;
-  pointer-events: none;
+  position: absolute; opacity: 0.07;
+  z-index: 2; pointer-events: none;
 }
 .seal-decor.top-right { top: 80px; right: 60px; width: 120px; }
 .seal-decor.bottom-left { bottom: 80px; left: 60px; width: 100px; }
-
-/* 細線裝飾 */
 .hero::before {
   content: '';
-  position: absolute;
-  top: 0; bottom: 0;
-  left: 50%;
+  position: absolute; top: 0; bottom: 0; left: 50%;
   width: 1px;
   background: linear-gradient(180deg,
-    transparent 0%,
-    rgba(197,162,111,0.12) 25%,
-    rgba(197,162,111,0.18) 50%,
-    rgba(197,162,111,0.12) 75%,
-    transparent 100%);
-  z-index: 2;
-  pointer-events: none;
+    transparent 0%, rgba(197,162,111,0.12) 25%,
+    rgba(197,162,111,0.18) 50%, rgba(197,162,111,0.12) 75%, transparent 100%);
+  z-index: 2; pointer-events: none;
 }
-
 .hero-content {
-  position: relative;
-  z-index: 3;
-  text-align: center;
-  max-width: 780px;
+  position: relative; z-index: 3;
+  text-align: center; max-width: 780px;
   padding: 100px 32px 80px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: flex; flex-direction: column; align-items: center;
 }
-
-/* 頂部英文小字 */
 .hero-eyebrow {
-  font-family: var(--font-en);
-  font-size: 11px;
-  color: var(--lyy-gold);
-  letter-spacing: 0.55em;
-  margin-bottom: 36px;
-  opacity: 0.8;
+  font-family: var(--font-en); font-size: 11px;
+  color: var(--lyy-gold); letter-spacing: 0.55em;
+  margin-bottom: 36px; opacity: 0.8;
 }
-
-/* Logo */
 .hero-logo {
-  width: 200px;
-  margin-bottom: 8px;
+  width: 200px; margin-bottom: 8px;
   filter: drop-shadow(0 2px 16px rgba(0,0,0,0.5)) brightness(1.05);
   animation: fadeDown 1.2s ease both;
 }
-
-/* 院名 */
 .hero-name {
   font-family: var(--font-serif);
   font-size: clamp(28px, 4vw, 44px);
-  font-weight: 300;
-  letter-spacing: 0.55em;
-  color: var(--lyy-cream);
-  margin-bottom: 6px;
+  font-weight: 300; letter-spacing: 0.55em;
+  color: var(--lyy-cream); margin-bottom: 6px;
   animation: fadeDown 1.2s 0.1s ease both;
 }
-
 .hero-name-en {
-  font-family: var(--font-en);
-  font-size: 13px;
-  color: rgba(197,162,111,0.65);
-  letter-spacing: 0.42em;
+  font-family: var(--font-en); font-size: 13px;
+  color: rgba(197,162,111,0.65); letter-spacing: 0.42em;
   margin-bottom: 52px;
   animation: fadeDown 1.2s 0.2s ease both;
 }
-
-/* 細橫線 */
 .hero-rule {
-  width: 1px;
-  height: 48px;
+  width: 1px; height: 48px;
   background: linear-gradient(180deg, transparent, rgba(197,162,111,0.5), transparent);
   margin: 0 auto 52px;
   animation: fadeIn 1.4s 0.3s ease both;
 }
-
-/* 詩句 */
 .hero-poem {
-  font-family: var(--font-serif);
-  font-size: 15.5px;
-  color: rgba(245,241,233,0.72);
-  line-height: 2.4;
-  letter-spacing: 0.22em;
-  margin-bottom: 56px;
+  font-family: var(--font-serif); font-size: 15.5px;
+  color: rgba(245,241,233,0.72); line-height: 2.4;
+  letter-spacing: 0.22em; margin-bottom: 56px;
   animation: fadeIn 1.2s 0.4s ease both;
 }
-
-/* 品牌定義區塊 */
 .brand-block {
-  width: 100%;
-  max-width: 560px;
+  width: 100%; max-width: 560px;
   border-top: 1px solid rgba(197,162,111,0.2);
   border-bottom: 1px solid rgba(197,162,111,0.2);
-  padding: 36px 0;
-  margin-bottom: 52px;
+  padding: 36px 0; margin-bottom: 52px;
   animation: fadeIn 1.2s 0.5s ease both;
 }
-
 .brand-row {
-  display: flex;
-  align-items: baseline;
-  justify-content: center;
-  gap: 20px;
-  margin-bottom: 18px;
+  display: flex; align-items: baseline;
+  justify-content: center; gap: 20px; margin-bottom: 18px;
 }
 .brand-row:last-child { margin-bottom: 0; }
-
 .brand-char {
-  font-family: var(--font-serif);
-  font-size: 26px;
-  color: var(--lyy-gold);
-  min-width: 32px;
-  text-align: center;
-  font-weight: 300;
+  font-family: var(--font-serif); font-size: 26px;
+  color: var(--lyy-gold); min-width: 32px; text-align: center; font-weight: 300;
 }
 .brand-divider {
-  width: 1px;
-  height: 14px;
-  background: rgba(197,162,111,0.3);
-  align-self: center;
+  width: 1px; height: 14px;
+  background: rgba(197,162,111,0.3); align-self: center;
 }
 .brand-def {
-  font-family: var(--font-serif);
-  font-size: 14px;
-  color: var(--lyy-cream);
-  letter-spacing: 0.22em;
-  min-width: 72px;
-  text-align: left;
+  font-family: var(--font-serif); font-size: 14px;
+  color: var(--lyy-cream); letter-spacing: 0.22em; min-width: 72px; text-align: left;
 }
 .brand-en {
-  font-family: var(--font-en);
-  font-size: 12.5px;
-  color: rgba(245,241,233,0.4);
-  font-style: italic;
-  letter-spacing: 0.04em;
+  font-family: var(--font-en); font-size: 12.5px;
+  color: rgba(245,241,233,0.4); font-style: italic; letter-spacing: 0.04em;
 }
-
-/* 結語 */
 .closing-text {
-  font-size: 14px;
-  color: rgba(245,241,233,0.55);
-  line-height: 2.1;
-  letter-spacing: 0.18em;
+  font-size: 14px; color: rgba(245,241,233,0.55);
+  line-height: 2.1; letter-spacing: 0.18em;
   animation: fadeIn 1.2s 0.6s ease both;
 }
 .closing-text .en {
-  display: block;
-  margin-top: 16px;
-  font-family: var(--font-en);
-  font-size: 12.5px;
-  color: rgba(245,241,233,0.32);
-  font-style: italic;
-  letter-spacing: 0.06em;
-  line-height: 1.9;
+  display: block; margin-top: 16px;
+  font-family: var(--font-en); font-size: 12.5px;
+  color: rgba(245,241,233,0.32); font-style: italic;
+  letter-spacing: 0.06em; line-height: 1.9;
 }
-
-/* 底部引導箭頭 */
 .scroll-hint {
-  position: absolute;
-  bottom: 32px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 3;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
+  position: absolute; bottom: 32px; left: 50%;
+  transform: translateX(-50%); z-index: 3;
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
   animation: fadeIn 2s 1s ease both;
 }
 .scroll-hint span {
-  font-family: var(--font-en);
-  font-size: 10px;
-  color: rgba(197,162,111,0.4);
-  letter-spacing: 0.3em;
+  font-family: var(--font-en); font-size: 10px;
+  color: rgba(197,162,111,0.4); letter-spacing: 0.3em;
 }
 .scroll-hint-line {
-  width: 1px;
-  height: 32px;
+  width: 1px; height: 32px;
   background: linear-gradient(180deg, rgba(197,162,111,0.4), transparent);
   animation: scrollPulse 2s 1.5s ease-in-out infinite;
 }
 
-/* ── 中段：三個功能區塊 ── */
-.features {
-  background: rgba(10,14,10,0.95);
+/* ── 關於區塊（三欄） ── */
+.about-section {
+  background: rgba(10,14,10,0.97);
   border-top: 1px solid rgba(197,162,111,0.08);
-  padding: 100px 0;
+  padding: 100px 0 80px;
 }
-.features-grid {
+.about-section-title {
+  text-align: center;
+  font-family: var(--font-en);
+  font-size: 11px;
+  color: rgba(197,162,111,0.5);
+  letter-spacing: 0.5em;
+  margin-bottom: 72px;
+}
+.about-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1px;
-  max-width: 960px;
+  max-width: 1040px;
   margin: 0 auto;
   background: rgba(197,162,111,0.08);
+  padding: 0 24px;
 }
-.feature-item {
-  background: rgba(10,14,10,0.95);
-  padding: 52px 40px;
-  text-align: center;
-  transition: background 0.3s ease;
+.about-item {
+  background: rgba(10,14,10,0.97);
+  padding: 52px 40px 48px;
 }
-.feature-item:hover { background: rgba(20,26,20,0.98); }
-.feature-icon {
-  font-family: var(--font-serif);
-  font-size: 32px;
+.about-item-label {
+  font-family: var(--font-en);
+  font-size: 10.5px;
   color: rgba(197,162,111,0.5);
-  margin-bottom: 20px;
+  letter-spacing: 0.45em;
   display: block;
-  letter-spacing: 0.1em;
+  margin-bottom: 18px;
 }
-.feature-item h3 {
-  font-size: 16px;
+.about-item h3 {
+  font-family: var(--font-serif);
+  font-size: 18px; font-weight: 400;
   color: var(--lyy-cream);
-  letter-spacing: 0.24em;
+  letter-spacing: 0.2em;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(197,162,111,0.15);
+}
+.about-item p {
+  font-size: 14px;
+  color: rgba(245,241,233,0.65);
+  line-height: 2.1;
+  letter-spacing: 0.08em;
   margin-bottom: 14px;
 }
-.feature-item p {
-  font-size: 13px;
-  color: rgba(245,241,233,0.5);
-  line-height: 2;
+.about-item p:last-child { margin-bottom: 0; }
+.about-quote {
+  border-left: 1px solid rgba(197,162,111,0.35);
+  padding: 16px 20px;
+  margin-top: 20px;
+  background: rgba(197,162,111,0.04);
+}
+.about-quote p {
+  font-family: var(--font-serif);
+  font-size: 13.5px;
+  color: rgba(245,241,233,0.7);
+  line-height: 2.1;
   letter-spacing: 0.1em;
+  margin: 0;
+}
+.about-quote .quote-en {
+  font-family: var(--font-en);
+  font-size: 12px;
+  color: rgba(245,241,233,0.35);
+  font-style: italic;
+  line-height: 1.8;
+  margin-top: 10px;
+  display: block;
 }
 
+/* ── 閉院聯繫區 ── */
+.contact-section {
+  background: rgba(8,12,8,0.98);
+  border-top: 1px solid rgba(197,162,111,0.08);
+  padding: 80px 24px;
+  text-align: center;
+}
+.contact-inner {
+  max-width: 560px;
+  margin: 0 auto;
+}
+.contact-inner h2 {
+  font-size: 18px; font-weight: 400;
+  color: var(--lyy-cream); letter-spacing: 0.22em;
+  margin-bottom: 8px;
+}
+.contact-sub {
+  font-family: var(--font-en); font-size: 12px;
+  color: rgba(197,162,111,0.55); letter-spacing: 0.3em;
+  display: block; margin-bottom: 32px;
+}
+.contact-rule {
+  width: 32px; height: 1px;
+  background: rgba(197,162,111,0.25);
+  margin: 0 auto 32px;
+}
+.contact-note {
+  font-size: 13.5px;
+  color: rgba(245,241,233,0.5);
+  line-height: 2; letter-spacing: 0.08em;
+  margin-bottom: 32px;
+}
+.tg-links {
+  display: flex; justify-content: center;
+  gap: 16px; flex-wrap: wrap;
+}
+.tg-btn {
+  display: inline-block; padding: 11px 28px;
+  border: 1px solid rgba(197,162,111,0.35);
+  color: var(--lyy-gold); text-decoration: none;
+  font-size: 13px; letter-spacing: 0.12em;
+  border-radius: 2px; transition: all 0.25s ease;
+}
+.tg-btn:hover {
+  background: rgba(197,162,111,0.1);
+  border-color: var(--lyy-gold);
+}
 
 /* ── Footer ── */
 footer {
-  background: rgba(6, 9, 6, 0.98);
-  padding: 48px 0 36px;
-  border-top: 1px solid rgba(197,162,111,0.08);
+  background: rgba(4, 7, 4, 0.99);
+  padding: 36px 0 28px;
+  border-top: 1px solid rgba(197,162,111,0.06);
 }
 .footer-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
+  display: flex; flex-direction: column;
+  align-items: center; gap: 16px;
 }
 .footer-logo {
-  font-family: var(--font-serif);
-  font-size: 14px;
-  color: rgba(197,162,111,0.5);
-  letter-spacing: 0.32em;
+  font-family: var(--font-serif); font-size: 13px;
+  color: rgba(197,162,111,0.4); letter-spacing: 0.32em;
 }
 .footer-links {
-  display: flex;
-  gap: 28px;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: flex; gap: 24px; flex-wrap: wrap; justify-content: center;
 }
 .footer-links a {
-  font-size: 12px;
-  color: rgba(245,241,233,0.35);
-  text-decoration: none;
-  letter-spacing: 0.1em;
-  transition: color 0.2s;
+  font-size: 11.5px; color: rgba(245,241,233,0.3);
+  text-decoration: none; letter-spacing: 0.1em; transition: color 0.2s;
 }
-.footer-links a:hover { color: rgba(197,162,111,0.7); }
+.footer-links a:hover { color: rgba(197,162,111,0.65); }
 .footer-copy {
-  font-size: 11.5px;
-  color: rgba(245,241,233,0.25);
-  letter-spacing: 0.12em;
-}
-.footer-rule {
-  width: 32px;
-  height: 1px;
-  background: rgba(197,162,111,0.2);
+  font-size: 11px; color: rgba(245,241,233,0.2); letter-spacing: 0.12em;
 }
 
 /* ── Animations ── */
@@ -441,20 +392,20 @@ footer {
   to   { opacity: 1; }
 }
 @keyframes scrollPulse {
-  0%, 100% { opacity: 0.4; transform: scaleY(1); }
-  50%       { opacity: 0.9; transform: scaleY(1.2); }
+  0%, 100% { opacity: 0.4; }
+  50%       { opacity: 0.9; }
 }
 
 /* ── Mobile ── */
 @media (max-width: 768px) {
   .nav-inner { padding: 0 20px; }
   .nav-logo { display: none; }
-  .nav-links { gap: 16px; }
+  .nav-links { gap: 14px; }
   .nav-links > li > a,
   .nav-links > li > span { font-size: 12px; }
   .hero::before { display: none; }
   .seal-decor { display: none; }
-  .features-grid { grid-template-columns: 1fr; }
+  .about-grid { grid-template-columns: 1fr; padding: 0 16px; }
   .brand-en { display: none; }
   .brand-divider { display: none; }
 }
@@ -462,13 +413,11 @@ footer {
 </head>
 <body>
 
-<!-- Navigation -->
 <nav>
   <div class="nav-inner">
     <a href="https://lyyuan.tw/" class="nav-logo">靈元院</a>
     <ul class="nav-links">
       <li><a href="https://lyyuan.tw/" class="active">首頁</a></li>
-      <li><a href="about.html">關於</a></li>
       <li>
         <span class="has-dropdown">活動</span>
         <ul class="dropdown">
@@ -519,8 +468,6 @@ footer {
 <header class="hero">
   <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
-
-  <!-- 印章裝飾 SVG -->
   <svg class="seal-decor top-right" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
     <rect x="8" y="8" width="84" height="84" rx="4" stroke="#C5A26F" stroke-width="2"/>
     <rect x="14" y="14" width="72" height="72" rx="2" stroke="#C5A26F" stroke-width="1"/>
@@ -531,7 +478,6 @@ footer {
     <rect x="14" y="14" width="72" height="72" rx="2" stroke="#C5A26F" stroke-width="1"/>
     <text x="50" y="58" text-anchor="middle" font-family="serif" font-size="28" fill="#C5A26F" letter-spacing="2">圓滿</text>
   </svg>
-
   <div class="hero-content">
     <p class="hero-eyebrow">LING · YUAN · YUAN</p>
     <img src="logo.png" alt="靈元院 Logo" class="hero-logo">
@@ -568,37 +514,64 @@ footer {
       空無、幽玄、靜穆——<br>
       一隅大隱於市的人神相會之靈山秘境<br>
       靜默中，通往本源的門緩緩開啟
-      <span class="en">
-        With spacious emptiness, delicate subtleness and silent respectfulness,<br>
-        a spiritual mountain secretly hidden in the city,<br>
-        where man and divinity meet in silence.
-      </span>
+      <span class="en">With spacious emptiness, delicate subtleness and silent respectfulness,<br>
+      a spiritual mountain secretly hidden in the city,<br>
+      where man and divinity meet in silence.</span>
     </p>
   </div>
-
   <div class="scroll-hint">
     <span>SCROLL</span>
     <div class="scroll-hint-line"></div>
   </div>
 </header>
 
-<!-- 三柱精神 -->
-<section class="features">
-  <div class="features-grid">
-    <div class="feature-item">
-      <span class="feature-icon">靈</span>
-      <h3>法脈傳承</h3>
-      <p>靈元院儀軌承靈山派無極法脈<br>以喚醒元神靈性為修行根本</p>
+<!-- 關於三欄 -->
+<section class="about-section">
+  <p class="about-section-title">ABOUT · LING YUAN YUAN</p>
+  <div class="about-grid">
+
+    <div class="about-item">
+      <span class="about-item-label">ORIGIN &amp; LINEAGE</span>
+      <h3>靈元院緣起與法脈</h3>
+      <p>奉靈山派創始神無極瑤池金母慈示，於台中設立專屬靈修之會靈聖地。</p>
+      <p>以喚醒元神靈性為靈修根本，提供自修者一個心靈棲居靜修之所。</p>
+      <p>靈元院規制與儀軌，依循靈山派無極法精神與無極瑤池金母降示之教導，向世人分享靈山派獨樹一幟的元神修煉奧秘、信仰神學與空間美學。</p>
     </div>
-    <div class="feature-item">
-      <span class="feature-icon">元</span>
-      <h3>空間美學</h3>
-      <p>依無極瑤池金母親降指示<br>打造隱於市的靈修靜謐道場</p>
+
+    <div class="about-item">
+      <span class="about-item-label">SACRED AESTHETICS</span>
+      <h3>靜心修持的靈性空間美學</h3>
+      <p>本院舉凡道場題名、布置擺設、靈性美學以及空間規劃，均依無極瑤池金母親降指示，及空間氣場流動而設計。</p>
+      <p>形成一處隱匿於都市叢林中，寧靜且適於靈修人親近無極瑤池金母、靈山法靜修的環境，使每一位進到靈元院的信眾皆能靜心，感受空間所帶來的沉靜與安寧。</p>
+      <div class="about-quote">
+        <p>空無、幽玄、靜穆，<br>一隅大隱隱於市，人神相會之靈山秘境。</p>
+        <span class="quote-en">With spacious emptiness, delicate subtleness and silent respectfulness, it is a spiritual mountain, a secret space where man and divinity meet, quietly hidden in a busy city.</span>
+      </div>
     </div>
-    <div class="feature-item">
-      <span class="feature-icon">院</span>
-      <h3>修持之道</h3>
-      <p>引導自修者返觀本心<br>安住真如，與天地共振</p>
+
+    <div class="about-item">
+      <span class="about-item-label">SPIRITUAL PRACTICE</span>
+      <h3>元神修煉之道</h3>
+      <p>靈元院的修法儀軌，以喚醒每一位靈修人的元神為目的，讓靈修者在心靈棲居之處，感受到無極瑤池金母的恩典。</p>
+      <p>在眾仙佛菩薩的指導之下，每一位龍鳳兒都能暫時遠離塵囂紛擾，找回內在的寧靜，喚醒沈睡的元神，回歸靈性本源。</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- 閉院聯繫 -->
+<section class="contact-section">
+  <div class="contact-inner">
+    <h2>目前閉院期間</h2>
+    <span class="contact-sub">CURRENTLY IN RETREAT</span>
+    <div class="contact-rule"></div>
+    <p class="contact-note">
+      暫不對外開放參訪。<br>
+      如有事務、法務或修行相關諮詢，敬請透過 Telegram 聯繫。
+    </p>
+    <div class="tg-links">
+      <a href="https://t.me/lyyuan_channel" target="_blank" class="tg-btn">Telegram 官方頻道</a>
+      <a href="https://t.me/lyyuan" target="_blank" class="tg-btn">Telegram 聯絡帳號</a>
     </div>
   </div>
 </section>
@@ -608,7 +581,6 @@ footer {
   <div class="container">
     <div class="footer-inner">
       <p class="footer-logo">靈 元 院　LING YUAN YUAN</p>
-      <div class="footer-rule"></div>
       <div class="footer-links">
         <a href="https://www.facebook.com/lyy.taiwan" target="_blank">Facebook</a>
         <a href="https://www.instagram.com/lyyuan03/" target="_blank">Instagram</a>
